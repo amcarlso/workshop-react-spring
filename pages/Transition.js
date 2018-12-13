@@ -23,12 +23,11 @@ export default class extends React.Component {
   render() {
     return (
       <Transition
-        native
         items={this.state.todoList}
         keys={item => item.key}
-        from={{ transform: "translate3d(0,-40px,0)" }}
+        from={{ transform: "translate3d(-40px,-40px,0)" }}
         enter={{ transform: "translate3d(0,0px,0)" }}
-        leave={{ transform: "translate3d(0,-40px,0)" }}
+        leave={{ transform: "translate3d(-40px,-40px,0)" }}
       >
         {(item, action, i) => props => (
           <div style={props} onClick={() => this.handleDelete(i)}>

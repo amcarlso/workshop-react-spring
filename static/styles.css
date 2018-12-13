@@ -1,7 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One");
 
 #title {
   font-family: "Press Start 2P", cursive;
   text-shadow: 1px 1px 1px #333;
   font-size: 40px;
+}
+
+.falling-letters {
+  font-family: "Fredoka One", cursive;
+  font-size: 120px;
+}
+
+#spring-title {
+  font-family: "Fredoka One", cursive;
+  font-size: 80px;
+}
+
+#spring-number {
+  font-family: "Fredoka One", cursive;
+  font-size: 60px;
 }
