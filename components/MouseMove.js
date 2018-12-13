@@ -16,25 +16,32 @@ export default class Demo extends React.Component {
   };
   render() {
     return (
-      <Trail native items={items} to={this.state}>
-        {(item, i) => props => (
+      <div>
+        <div style={{ position: "fixed", top: 0, left: 0 }}>
           <Link href="/">
-            <animated.div
-              style={{
-                zIndex: items.length - i,
-                transform: props.coords.interpolate(this.transform),
-                borderRadius: "100px",
-                height: "100px",
-                width: "100px",
-                backgroundColor: "pink",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
-              }}
-            />
+            <button>Go Back</button>
           </Link>
-        )}
-      </Trail>
+        </div>
+        <Trail native items={items} to={this.state}>
+          {(item, i) => props => (
+            <Link href="/">
+              <animated.div
+                style={{
+                  zIndex: items.length - i,
+                  transform: props.coords.interpolate(this.transform),
+                  borderRadius: "100px",
+                  height: "100px",
+                  width: "100px",
+                  backgroundColor: "pink",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              />
+            </Link>
+          )}
+        </Trail>
+      </div>
     );
   }
 }
