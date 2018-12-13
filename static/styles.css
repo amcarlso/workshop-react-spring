@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
 @import url("https://fonts.googleapis.com/css?family=Fredoka+One");
+@import url("https://fonts.googleapis.com/css?family=Righteous");
 
 #title {
   font-family: "Press Start 2P", cursive;
@@ -7,9 +8,18 @@
   font-size: 40px;
 }
 
+.main-font {
+  font-family: "Fredoka One", cursive;
+}
+
 .falling-letters {
   font-family: "Fredoka One", cursive;
   font-size: 120px;
+}
+
+#falling-title {
+  font-family: "Fredoka One", cursive;
+  font-size: 35px;
 }
 
 #spring-title {
@@ -17,7 +27,26 @@
   font-size: 80px;
 }
 
+#spring-index {
+  font-family: "Fredoka One", cursive;
+  font-size: 35px;
+}
+
 #spring-number {
   font-family: "Fredoka One", cursive;
   font-size: 60px;
+}
+
+#keyframes-title {
+  font-family: "Righteous", cursive;
+  font-size: 35px;
+}
+
+#nav-trails {
+  font-family: "Righteous", cursive;
+  font-size: 35px;
+  width: 500px;
+  box-shadow: 2px 2px 5px #333;
+  background-color: "lightgrey";
+  padding-left: 15px;
 }

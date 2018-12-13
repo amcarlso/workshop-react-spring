@@ -33,6 +33,7 @@ export default class extends React.Component {
         <Head>
           <link href="/static/styles.css" rel="stylesheet" />
         </Head>
+
         {/* Return */}
         <div style={{ position: "fixed", top: 0, left: 0 }}>
           <Link href="/">
@@ -157,7 +158,7 @@ export default class extends React.Component {
           <Spring
             from={{ x: 100 }}
             to={{ x: this.state.flip ? 0 : 100 }}
-            config={{ friction: 60, tension: 180 }}
+            config={{ friction: 2, tension: 180 }}
           >
             {props => (
               <svg
@@ -206,18 +207,93 @@ export default class extends React.Component {
             x: this.state.flip ? 100 : 0,
             y: this.state.flip ? 0 : 100
           }}
+          config={{ friction: 6, tension: 11 }}
         >
           {props => {
             return (
-              <div
-                style={{
-                  width: 0,
-                  height: 0,
-                  borderBottom: `100px solid #333`,
-                  borderLeft: `${props.x}px solid transparent`,
-                  borderRight: `${props.y}px solid transparent`
-                }}
-              />
+              <div style={{ display: "flex" }}>
+                <div
+                  style={{
+                    width: 0,
+                    height: 0,
+                    borderBottom: `100px solid #333`,
+                    borderLeft: `${props.x}px solid transparent`,
+                    borderRight: `${props.x}px solid transparent`
+                  }}
+                />
+                <div
+                  style={{
+                    width: 0,
+                    height: 0,
+                    borderBottom: `100px solid #333`,
+                    borderLeft: `${props.x}px solid transparent`,
+                    borderRight: `${props.y}px solid transparent`
+                  }}
+                />
+                <div
+                  style={{
+                    width: 0,
+                    height: 0,
+                    borderBottom: `100px solid #333`,
+                    borderLeft: `${props.y}px solid transparent`,
+                    borderRight: `${props.x}px solid transparent`
+                  }}
+                />
+                <div
+                  style={{
+                    width: 0,
+                    height: 0,
+                    borderBottom: `100px solid #333`,
+                    borderLeft: `${props.x}px solid transparent`,
+                    borderRight: `${props.y}px solid transparent`
+                  }}
+                />
+                <div
+                  style={{
+                    width: 0,
+                    height: 0,
+                    borderBottom: `100px solid #333`,
+                    borderLeft: `${props.y}px solid transparent`,
+                    borderRight: `${props.x}px solid transparent`
+                  }}
+                />
+                <div
+                  style={{
+                    width: 0,
+                    height: 0,
+                    borderBottom: `100px solid #333`,
+                    borderLeft: `${props.x}px solid transparent`,
+                    borderRight: `${props.y}px solid transparent`
+                  }}
+                />
+                <div
+                  style={{
+                    width: 0,
+                    height: 0,
+                    borderBottom: `100px solid #333`,
+                    borderLeft: `${props.y}px solid transparent`,
+                    borderRight: `${props.x}px solid transparent`
+                  }}
+                />
+                <div
+                  style={{
+                    width: 0,
+                    height: 0,
+                    borderBottom: `100px solid #333`,
+                    borderLeft: `${props.x}px solid transparent`,
+                    borderRight: `${props.y}px solid transparent`
+                  }}
+                />
+                <div
+                  style={{
+                    width: 0,
+                    height: 0,
+                    borderBottom: `100px solid #333`,
+                    borderLeft: `${props.y}px solid transparent`,
+                    borderRight: `${props.y}px solid transparent`
+                  }}
+                />
+              </div>
             );
           }}
         </Spring>
