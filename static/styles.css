@@ -8,6 +8,12 @@
   font-size: 40px;
 }
 
+#go-back {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 .main-font {
   font-family: "Fredoka One", cursive;
 }
@@ -20,6 +26,15 @@
 #falling-title {
   font-family: "Fredoka One", cursive;
   font-size: 35px;
+}
+
+#spring-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
 }
 
 #spring-title {

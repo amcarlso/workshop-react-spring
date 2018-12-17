@@ -20,22 +20,13 @@ export default class extends React.Component {
   }
   render() {
     return (
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100vh",
-          width: "100%"
-        }}
-      >
+      <div id="spring-container">
         <Head>
           <link href="/static/styles.css" rel="stylesheet" />
         </Head>
 
         {/* Return */}
-        <div style={{ position: "fixed", top: 0, left: 0 }}>
+        <div id="go-back">
           <Link href="/">
             <button>Go Back</button>
           </Link>
