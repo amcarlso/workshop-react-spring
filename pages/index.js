@@ -105,6 +105,10 @@ export default class extends React.Component {
           </Link>
           <h2>Parallax Examples</h2>
           <p>Work In Progress...</p>
+          <h2>SVG Animation</h2>
+          <Link href="/SVGAnimation">
+            <a>SVG Animation</a>
+          </Link>
         </div>
       </div>
     );

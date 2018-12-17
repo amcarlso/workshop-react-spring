@@ -59,6 +59,7 @@ export default class extends React.Component {
                 <div
                   onClick={this.handleMenu}
                   style={{
+                    cursor: "pointer",
                     height: 0,
                     width: 0,
                     borderRight: `${props.x}px solid #333`,
