@@ -66,19 +66,6 @@ export default class extends React.Component {
           >
             <FallingTitle />
           </div>
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "space-between"
-            }}
-          >
-            <MrSmiles timer="2000" />
-            <MrSmiles timer="2500" />
-            <MrSmiles timer="1000" />
-            <MrSmiles timer="1500" />
-            <MrSmiles timer="3000" />
-          </div>
 
           {/* <div style={{ display: "flex" }}>
             <Link prefetch href="/Transition">
@@ -99,15 +86,26 @@ export default class extends React.Component {
           <Link href="/FallingLetters">
             <a>FallingLetters</a>
           </Link>
+          <h2>SVG Animation</h2>
+
+          <MrSmiles timer="2500" />
+          <Link href="/SVGAnimation">
+            <a>SVG Animation</a>
+          </Link>
+          <h2>Transition Examples</h2>
+          <Link href="/TransitionExample">
+            <a>Transition Example</a>
+          </Link>
+          <Link href="/TransitionGridExample">
+            <a>Transition Grid Example</a>
+          </Link>
           <h2>KeyFrames Examples</h2>
           <Link href="/KeyFrames">
             <a>KeyFrames Example</a>
           </Link>
           <h2>Parallax Examples</h2>
-          <p>Work In Progress...</p>
-          <h2>SVG Animation</h2>
-          <Link href="/SVGAnimation">
-            <a>SVG Animation</a>
+          <Link href="/ParallaxExample">
+            <a>Parallax Example</a>
           </Link>
         </div>
       </div>

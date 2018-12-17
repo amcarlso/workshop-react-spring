@@ -1,5 +1,5 @@
 import React from "react";
-import { Parallax, ParallaxLayer } from "react-spring/addons";
+import { Parallax, ParallaxLayer } from "react-spring/dist/addons.cjs.js";
 
 export default class extends React.Component {
   render() {
