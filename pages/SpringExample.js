@@ -6,7 +6,8 @@ import Head from "next/head";
 export default class extends React.Component {
   state = {
     timer: "",
-    flip: true
+    flip: true,
+    modal: false
   };
   componentDidMount() {
     var timer = setInterval(() => {
@@ -18,6 +19,11 @@ export default class extends React.Component {
   componentWillUnmount() {
     clearInterval(this.state.timer);
   }
+
+  handleModal = () => {
+    this.setState({ modal: !this.state.modal });
+  };
+
   render() {
     return (
       <div id="spring-container">
@@ -32,6 +38,30 @@ export default class extends React.Component {
           </Link>
         </div>
         {/* ///////////////////// */}
+        <button onClick={this.handleModal}>Show Code</button>
+        <Spring
+          from={{ opacity: 0 }}
+          to={{
+            opacity: this.state.modal ? 1 : 0
+          }}
+        >
+          {mot => {
+            return (
+              <div
+                style={{
+                  position: "fixed",
+                  left: "50%",
+                  transform: "translate(-50%, 0)",
+                  zIndex: 6,
+                  opacity: mot.opacity
+                }}
+                onClick={this.state.modal ? () => this.handleModal() : null}
+              >
+                <img src="/static/ReactSpring-Simple.PNG" />
+              </div>
+            );
+          }}
+        </Spring>
         <Spring
           from={{ opacity: 0 }}
           to={{ opacity: this.state.flip ? 1 : 0 }}

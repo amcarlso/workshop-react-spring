@@ -15,7 +15,6 @@ export default class extends React.Component {
   };
 
   handleDelete(i) {
-    console.log(i);
     this.state.todoList.splice(i, 1);
     this.setState({ todoList: this.state.todoList });
   }

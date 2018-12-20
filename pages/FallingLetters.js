@@ -1,5 +1,5 @@
 import React from "react";
-import { Trail } from "react-spring";
+import { Spring, Trail } from "react-spring";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -18,8 +18,14 @@ export default class extends React.Component {
       { text: "I", key: 9 },
       { text: "N", key: 10 },
       { text: "G", key: 11 }
-    ]
+    ],
+    modal: false
   };
+
+  handleModal = () => {
+    this.setState({ modal: !this.state.modal });
+  };
+
   render() {
     return (
       <div
@@ -42,6 +48,35 @@ export default class extends React.Component {
           </Link>
         </div>
         {/* ///////////////////// */}
+        <button
+          style={{ position: "fixed", top: 0 }}
+          onClick={this.handleModal}
+        >
+          Show Code
+        </button>
+        <Spring
+          from={{ opacity: 0 }}
+          to={{
+            opacity: this.state.modal ? 1 : 0
+          }}
+        >
+          {mot => {
+            return (
+              <div
+                style={{
+                  position: "fixed",
+                  left: "50%",
+                  transform: "translate(-50%, 0)",
+                  zIndex: 6,
+                  opacity: mot.opacity
+                }}
+                onClick={this.state.modal ? () => this.handleModal() : null}
+              >
+                <img src="/static/ReactTrail-Simple.PNG" />
+              </div>
+            );
+          }}
+        </Spring>
         <div style={{ display: "flex" }}>
           <Trail
             items={this.state.titles}
