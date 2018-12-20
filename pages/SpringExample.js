@@ -38,7 +38,12 @@ export default class extends React.Component {
           </Link>
         </div>
         {/* ///////////////////// */}
-        <button onClick={this.handleModal}>Show Code</button>
+        <button
+          onClick={this.handleModal}
+          style={{ position: "fixed", top: 0 }}
+        >
+          Show Code
+        </button>
         <Spring
           from={{ opacity: 0 }}
           to={{
