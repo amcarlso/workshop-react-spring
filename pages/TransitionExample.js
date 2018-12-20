@@ -1,5 +1,5 @@
 import React from "react";
-import { Transition } from "react-spring";
+import { Spring, Transition } from "react-spring";
 import Link from "next/link";
 
 export default class extends React.Component {
@@ -15,7 +15,7 @@ export default class extends React.Component {
       {
         key: 2,
         name: "Scrappy",
-        text: "penguin",
+        text: "penguins",
         pic:
           "https://previews.123rf.com/images/milante/milante1703/milante170300055/74990361-big-nose-in-the-unfriendly-dog-face-vicious-expression-.jpg"
       },
@@ -30,7 +30,7 @@ export default class extends React.Component {
     ],
     flip: false,
     key: 4,
-    singleItem: [{ key: 1, text: "something" }]
+    modal: false
   };
 
   handleDelete(i) {
@@ -52,6 +52,10 @@ export default class extends React.Component {
     this.setState({ items: [...tempItems], key: ++this.state.key });
   };
 
+  handleModal = () => {
+    this.setState({ modal: !this.state.modal });
+  };
+
   render() {
     return (
       <div style={{ height: "100vh", width: "100%" }}>
@@ -71,6 +75,7 @@ export default class extends React.Component {
               <button>Go Back</button>
             </Link>
           </div>
+
           <div
             style={{
               width: "200px",
